@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FLAMES Game</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Fun Projects Hub</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>🔥 FLAMES Game 🔥</h1>
+<div id="home">
+  <h1>🎉 Fun Projects Hub 🎉</h1>
+  <div class="grid">
+    <button onclick="openProject('flames')">🔥 FLAMES</button>
+    <button onclick="openProject('love')">❤️ Love Calculator</button>
+    <button onclick="openProject('color')">🎨 Color Generator</button>
+    <button onclick="openProject('rps')">✊ Rock Paper Scissors</button>
+    <button onclick="openProject('todo')">📝 To Do App</button>
+    <button onclick="openProject('dice')">🎲 Dice Roller</button>
+  </div>
+</div>
 
-        <input type="text" id="name1" placeholder="Enter First Name">
-        <input type="text" id="name2" placeholder="Enter Second Name">
-
-        <button onclick="calculateFlames()">Check Relationship</button>
-
-        <h2 id="result"></h2>
-    </div>
+<div id="projectArea" class="hidden">
+  <button onclick="goHome()">⬅ Back</button>
+  <div id="projectContent"></div>
+</div>
 
 <script src="script.js"></script>
 </body>
