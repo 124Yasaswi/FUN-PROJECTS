@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: beige;
-  color: black;
+  background: black;
+  color: white;
   text-align: center;
   overflow-x: hidden;
 }
