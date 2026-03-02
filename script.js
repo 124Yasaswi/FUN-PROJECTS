@@ -26,7 +26,7 @@ function openProject(name) {
 
   if (name === "color") {
     content = `
-      <h2>🎨 Random Color</h2>
+      <h2>🎨 Random Color Generator</h2>
       <button onclick="changeColor()">Generate</button>
       <h3 id="colorCode"></h3>
     `;
@@ -44,7 +44,7 @@ function openProject(name) {
 
   if (name === "todo") {
     content = `
-      <h2>📝 To Do</h2>
+      <h2>📝 To-Do App</h2>
       <input id="task" placeholder="New Task">
       <button onclick="addTask()">Add</button>
       <ul id="taskList"></ul>
@@ -54,7 +54,7 @@ function openProject(name) {
   if (name === "dice") {
     content = `
       <h2>🎲 Dice Roller</h2>
-      <button onclick="rollDice()">Roll</button>
+      <button onclick="rollDice()">Roll Dice</button>
       <h3 id="diceResult"></h3>
     `;
   }
@@ -71,9 +71,9 @@ function goHome() {
 function runFlames() {
   let n1 = document.getElementById("f1").value;
   let n2 = document.getElementById("f2").value;
-  let result = ["Friends","Love","Affection","Marriage","Enemies","Siblings"];
+  let results = ["Friends 🤝","Love ❤️","Affection 😊","Marriage 💍","Enemies 😡","Siblings 👨‍👩‍👧"];
   let index = (n1.length + n2.length) % 6;
-  document.getElementById("fresult").innerText = result[index];
+  document.getElementById("fresult").innerText = results[index];
 }
 
 /* Love Calculator */
@@ -89,7 +89,7 @@ function changeColor() {
   document.getElementById("colorCode").innerText = color;
 }
 
-/* Rock Paper Scissors */
+/* RPS */
 function playRPS(user) {
   let choices = ["Rock","Paper","Scissors"];
   let comp = choices[Math.floor(Math.random()*3)];
@@ -97,9 +97,10 @@ function playRPS(user) {
     "You: " + user + " | Computer: " + comp;
 }
 
-/* To Do */
+/* To-Do */
 function addTask() {
   let task = document.getElementById("task").value;
+  if(task==="") return;
   let li = document.createElement("li");
   li.innerText = task;
   document.getElementById("taskList").appendChild(li);
