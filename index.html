@@ -6,20 +6,21 @@
 </head>
 <body>
 
-<div id="home">
+<div id="home" class="fade-in">
   <h1>🎉 Fun Projects Hub 🎉</h1>
+
   <div class="grid">
-    <button onclick="openProject('flames')">🔥 FLAMES</button>
-    <button onclick="openProject('love')">❤️ Love Calculator</button>
-    <button onclick="openProject('color')">🎨 Color Generator</button>
-    <button onclick="openProject('rps')">✊ Rock Paper Scissors</button>
-    <button onclick="openProject('todo')">📝 To Do App</button>
-    <button onclick="openProject('dice')">🎲 Dice Roller</button>
+    <div class="card" onclick="openProject('flames')">🔥 FLAMES</div>
+    <div class="card" onclick="openProject('love')">❤️ Love Calculator</div>
+    <div class="card" onclick="openProject('color')">🎨 Color Generator</div>
+    <div class="card" onclick="openProject('rps')">✊ Rock Paper Scissors</div>
+    <div class="card" onclick="openProject('todo')">📝 To-Do App</div>
+    <div class="card" onclick="openProject('dice')">🎲 Dice Roller</div>
   </div>
 </div>
 
-<div id="projectArea" class="hidden">
-  <button onclick="goHome()">⬅ Back</button>
+<div id="projectArea" class="hidden fade-in">
+  <button class="back-btn" onclick="goHome()">⬅ Back</button>
   <div id="projectContent"></div>
 </div>
 
