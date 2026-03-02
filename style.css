@@ -1,39 +1,97 @@
 body {
-  font-family: Arial;
-  text-align: center;
-  background: linear-gradient(45deg,#ff9a9e,#fad0c4);
   margin: 0;
-  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,#667eea,#764ba2);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
 }
 
 h1 {
-  margin-bottom: 30px;
+  margin-top: 40px;
+  font-size: 40px;
+  letter-spacing: 1px;
 }
 
-.grid button {
-  padding: 15px 20px;
-  margin: 10px;
-  border: none;
-  background: white;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 20px;
+  width: 80%;
+  margin: 50px auto;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
   cursor: pointer;
-  border-radius: 8px;
-  font-size: 16px;
+  transition: 0.3s ease;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-#projectArea {
-  margin-top: 30px;
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(255,255,255,0.2);
 }
 
 .hidden {
   display: none;
 }
 
-input, button {
-  padding: 10px;
+#projectArea {
+  margin-top: 40px;
+}
+
+input {
+  padding: 12px;
   margin: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 200px;
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #ff758c;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff4e50;
+  transform: scale(1.05);
+}
+
+.back-btn {
+  margin-bottom: 20px;
+  background: white;
+  color: #333;
+}
+
+.fade-in {
+  animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
 }
 
 ul {
   list-style: none;
   padding: 0;
+}
+
+li {
+  background: rgba(255,255,255,0.2);
+  margin: 5px auto;
+  padding: 10px;
+  width: 200px;
+  border-radius: 6px;
 }
